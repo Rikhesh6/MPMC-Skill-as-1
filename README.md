@@ -38,8 +38,9 @@ END
 <img width="309" height="288" alt="image" src="https://github.com/user-attachments/assets/79bc391e-22bb-436c-8282-40bfe490de51" />
 <img width="311" height="283" alt="image" src="https://github.com/user-attachments/assets/b235f51a-5a67-4fb8-a2a7-309f97c811e1" />
 
-
-
+---
+## RESULT:
+The smallest number in an array of N elements is found.
 
 
 
