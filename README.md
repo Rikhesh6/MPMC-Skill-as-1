@@ -8,7 +8,42 @@ To write an assembly language program in 8051 to find the smallest number in an 
 * Personal Computer with KEIL Software
 
 ---
-#### Program
+## ALGORITHM
+Initialize registers
+
+Load R0 with the number of elements (20H) to process.
+
+Load R1 with the starting memory address of the numbers (30H).
+
+Load first number as initial smallest
+
+Move the first number pointed by R1 into B.
+
+Decrement counter and increment pointer
+
+DEC R0 → Reduce remaining count.
+
+INC R1 → Point to next number.
+
+Compare remaining numbers in a loop
+
+Load number at @R1 into A.
+
+Subtract B (current smallest) from A.
+
+If A < B, update B with A (new smallest).
+
+Increment R1 to point to next number.
+
+DJNZ R0, NEXT → Repeat loop until all numbers are checked.
+
+Store the smallest number
+
+Move B into memory location 40H.
+
+End program
+---
+#### PROGRAM
 
 ```
 ORG 0000H          
