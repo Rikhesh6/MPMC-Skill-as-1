@@ -12,34 +12,36 @@ To write an assembly language program in 8051 to find the smallest number in an 
 
 ```
 ORG 0000H          
-MOV R0, #06H       
-MOV R1, #30H       
+MOV A, 20H        
+MOV R0, A
+MOV R1, #30H      
 MOV A, @R1         
-MOV B, A          
+MOV B, A           
 DEC R0             
 INC R1          
 NEXT: MOV A, @R1    
 CLR C               
-SUBB A, B          
+SUBB A, B           
 JC SMALL            
-SJMP L2          
+SJMP SKIP           
 SMALL: MOV B, @R1   
-L2: INC R1       
-DJNZ R0, NEXT        
+SKIP: INC R1        
+DJNZ R0, NEXT       
 MOV 40H, B          
 END
-
 ```
-
-
 ---
 
 ## OUTPUT IMAGE FROM KEIL SOFTWARE
-<img width="310" height="286" alt="image" src="https://github.com/user-attachments/assets/50a6ae90-8772-4342-86bd-7708ef9a0bf8" />
+<img width="1919" height="861" alt="image" src="https://github.com/user-attachments/assets/e1bc6e66-8e5f-46f2-9744-ff9b383ca8df" />
+<img width="318" height="293" alt="image" src="https://github.com/user-attachments/assets/17aca8a6-a2ed-4b0b-a2e1-d5903549ca90" />
+<img width="309" height="288" alt="image" src="https://github.com/user-attachments/assets/79bc391e-22bb-436c-8282-40bfe490de51" />
+<img width="311" height="283" alt="image" src="https://github.com/user-attachments/assets/b235f51a-5a67-4fb8-a2a7-309f97c811e1" />
 
-<img width="1919" height="838" alt="image" src="https://github.com/user-attachments/assets/351f0134-2303-4b14-96eb-20364b77e6fc" />
 
-<img width="299" height="284" alt="image" src="https://github.com/user-attachments/assets/0197278f-58e1-4387-a5f5-7a2ba3f39777" />
+
+
+
 
 
 
